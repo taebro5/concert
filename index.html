@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <style>
+        html{
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+            background-color: #0e1016;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        .main {
+            width: 100%
+        }
+
+        @media all and (min-width: 1000px) {
+            .main {
+                width: 50%;
+                margin: auto;
+            }
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.rwdImageMaps.min.js"></script>
+    <script src="./js/ios-orientationchange-fix.min.js"></script>
+
+</head>
+
+<body>
+    <div class="main">
+        <img class="pc-image" src="./img/sample.png" usemap="#image-map">
+
+        <map name="image-map">
+            <area target="" alt="1" title="1" href="http://굿모닝평생.com" coords="496,1693,1424,1854" shape="rect">
+            <area target="" alt="2" title="2" href="http://con-44.com" coords="501,2402,1424,2556" shape="rect">
+            <area target="" alt="3" title="3" href="http://con-55.com" coords="499,2589,1424,2750" shape="rect">
+            <area target="" alt="4" title="4" href="" coords="527,3087,1411,3242" shape="rect">
+        </map>
+    </div>
+
+    <script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script>
+    <script>
+        (function ($) {
+            $(document).ready(function (e) {
+                $('.pc-image').rwdImageMaps();
+            });
+        })(jQuery);
+    </script>
+</body>
+
+</html>
